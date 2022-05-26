@@ -27,6 +27,9 @@
             </div>
         </div>
     </div> 
+    
+<!--Quick reminder : The apiKey won't work unless you get it yourself by registring on newsapi.org -->
+   
     <script>
         $.ajax({
             url:'https://newsapi.org/v2/everything?q=latest&apiKey=ae20dfdb45454b18be5655c99904337d',
@@ -36,6 +39,9 @@
                 $('#loading').hide();
                 console.log(hasil)
                 for (i=0; i<hasil.articles.length; i++){
+                    
+// The var list are used for containing some bootstrap code for cards. And hasil.articles mean we'll take json code from hasil variable and the information that we needed is article.
+                    
                     var list = `<div class="card m-3 shadow">
                                 <div class="row g-0">
                                     <div class="col md-4">
